@@ -65,6 +65,9 @@ dependencies:
   get:
   email_validator: ^2.1.17
   fan_carousel_image_slider: ^0.1.2
+  date_field: ^3.0.5
+  otp_text_field:
+
 
 dev_dependencies:
   flutter_test:
@@ -110,11 +113,14 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
-  #       - asset: fonts/Schyler-Italic.ttf
+  fonts:
+    - family: SourceCodePro
+      fonts:
+        - asset: fonts/SourceCodePro-Black.ttf
+        - asset: fonts/SourceCodePro-BlackItalic.ttf
+        - asset: fonts/SourceCodePro-Bold.ttf
+        - asset: fonts/SourceCodePro-BoldItalic.ttf
+        - asset: fonts/SourceCodePro-ExtraBold.ttf
   #         style: italic
   #   - family: Trajan Pro
   #     fonts:

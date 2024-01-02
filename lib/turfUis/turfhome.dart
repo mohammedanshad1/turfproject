@@ -108,10 +108,19 @@ class _HomeState extends State<Home> {
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:get/get_navigation/src/root/get_material_app.dart';
+import 'package:turfproject/turfUis/turf1booking.dart';
+import 'package:turfproject/turfUis/turf2booking.dart';
+import 'package:turfproject/turfUis/turf3booking.dart';
+import 'package:turfproject/turfUis/turf4booking.dart';
+import 'package:turfproject/turfUis/turf5booking.dart';
+import 'package:turfproject/turfUis/turf6booking.dart';
 
 void main() {
   runApp(DevicePreview(
-      builder: (BuildContext context) => MaterialApp(
+      builder: (BuildContext context) =>MaterialApp(
             home: turfhome(),
             useInheritedMediaQuery: true,
             debugShowCheckedModeBanner: false,
@@ -124,6 +133,15 @@ class turfhome extends StatefulWidget {
 }
 
 class _turfhomeState extends State<turfhome> {
+  
+  
+  var page=[TabBarView(children: [turf1()]),
+    TabBarView(children: [turf2()]),
+    TabBarView(children: [turf3()]),
+    TabBarView(children: [turf4()]),
+    TabBarView(children: [turf5()]),
+    TabBarView(children: [turf6()])
+  ];
   var image = [
     "assets/icons/2_2.jpg",
     "assets/icons/Ken-Sports-Football-Turf-123-q2sflm30jtw5j1p91aswn4gzfuokmkn15sjalowxgw.jpeg",
@@ -150,129 +168,145 @@ class _turfhomeState extends State<turfhome> {
     "Est Hill,Kozhikkode",
   ];
 
+
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        body: CustomScrollView(slivers: [
-      SliverAppBar(
-          floating: true,
-          pinned: true,
-          leading: Padding(
-            padding: const EdgeInsets.only(bottom: 70),
-            child: Icon(Icons.menu),
-          ),
-          title: Center(child: Text("Kozhikkode Turfs")),
-          actions: [
-            Padding(
+    return DefaultTabController(length: 10,
+      child: Scaffold(
+          body: CustomScrollView(slivers: [
+        SliverAppBar(
+            floating: true,
+            pinned: true,
+            leading: Padding(
               padding: const EdgeInsets.only(bottom: 70),
-              child: Icon(Icons.favorite),
+              child: Icon(Icons.menu),
             ),
-          ],
-          bottom: AppBar(
-              elevation: 0,
-              title: Container(
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(30),
-                    color: Colors.white),
-                child: TextField(
-                  decoration: InputDecoration(
-                      hintText: "Search By Names",
-                      prefixIcon: Icon(Icons.search)),
-                ),
-              ))),
-      /*SliverGrid(
-    delegate: SliverChildBuilderDelegate((context, index) {
-    return Padding(
-    padding: const EdgeInsets.only(top: 15),
-    child: Container(decoration: BoxDecoration(color: color[index],
-    borderRadius: BorderRadius.circular(20)),
-    child: Padding(
-    padding: const EdgeInsets.only(top: 30),
-    child: Column(
-    children: [
-    Icon(
-    icon[index],
-    color: Colors.white,
-    ),
-    Text(
-    name[index],
-    style: TextStyle(color: Colors.white),
-    ),
-    ],
-    ),
-    ),
-    ),
+            title: Center(child: Padding(
+              padding: const EdgeInsets.only(right: 30),
+              child: Text("Kozhikkode Turfs"),
+            )),
+           // actions: [
+             // Padding(
+               // padding: const EdgeInsets.only(bottom: 70),
+                //child: Icon(Icons.favorite),
+              //),
+            //],
+            bottom: AppBar(
+                elevation: 0,
+                title: Container(
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(30),
+                      color: Colors.white),
+                  child: TextField(
+                    decoration: InputDecoration(
+                        hintText: "Search By Names",
+                        prefixIcon: Icon(Icons.search)),
+                  ),
+                ))),
+        /*SliverGrid(
+      delegate: SliverChildBuilderDelegate((context, index) {
+      return Padding(
+      padding: const EdgeInsets.only(top: 15),
+      child: Container(decoration: BoxDecoration(color: color[index],
+      borderRadius: BorderRadius.circular(20)),
+      child: Padding(
+      padding: const EdgeInsets.only(top: 30),
+      child: Column(
+      children: [
+      Icon(
+      icon[index],
+      color: Colors.white,
+      ),
+      Text(
+      name[index],
+      style: TextStyle(color: Colors.white),
+      ),
+      ],
+      ),
+      ),
+      ),
+      );
+      }, childCount: name.length),
+      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+      crossAxisCount: 3, mainAxisSpacing: 80, crossAxisSpacing: 20)),*/
+
+
+
+
+
+          SliverList(
+                  delegate: SliverChildBuilderDelegate((context, index) {
+                return Container(
+                  child: Padding(
+                    padding: const EdgeInsets.only(top: 30, left: 20, right: 20),
+                    child: Card(
+                        color: Colors.white,
+                        child: Column(
+                          children: [
+                            Column(
+                              children: [
+                                Image(
+                                  image: AssetImage(image[index]),
+                                  height: 130,
+                                  width: double.infinity,
+                                  fit: BoxFit.fitWidth,
+                                ),
+                              ],
+                            ),
+                            ListTile(
+                              title: Text(
+                                text[index],
+                                style: TextStyle(
+                                    color: Colors.black, fontWeight: FontWeight.bold),
+                              ),
+                              subtitle: Text(
+                                sub[index],
+                                style: TextStyle(color: Colors.black),
+                              ),
+                            ),
+                            Container(
+                                child: Padding(
+                              padding: const EdgeInsets.only(left: 10),
+                              child: Row(
+                                children: [
+                                  Icon(
+                                    Icons.star,
+                                    color: Colors.green,
+                                  ),
+                                  Icon(
+                                    Icons.star,
+                                    color: Colors.green,
+                                  ),
+                                  Icon(
+                                    Icons.star,
+                                    color: Colors.green,
+                                  ),
+                                  Icon(
+                                    Icons.star,
+                                    color: Colors.green,
+                                  ),
+                                  Icon(
+                                    Icons.star,
+                                    color: Colors.green,
+                                  ),
+                                  Text(
+                                    "  (220 reviews) ",
+                                    style: TextStyle(color: Colors.black87),
+                                  )
+                                ],
+                              ),
+                            ))
+                          ],
+                        )),
+                  ),
+                );
+              }, childCount: image.length)),
+
+
+
+
+      ])),
     );
-    }, childCount: name.length),
-    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-    crossAxisCount: 3, mainAxisSpacing: 80, crossAxisSpacing: 20)),*/
-      SliverList(
-          delegate: SliverChildBuilderDelegate((context, index) {
-        return Container(
-          child: Padding(
-            padding: const EdgeInsets.only(top: 30, left: 20, right: 20),
-            child: Card(
-                color: Colors.white,
-                child: Column(
-                  children: [
-                    Column(
-                      children: [
-                        Image(
-                          image: AssetImage(image[index]),
-                          height: 130,
-                          width: double.infinity,
-                          fit: BoxFit.fitWidth,
-                        ),
-                      ],
-                    ),
-                    ListTile(
-                      title: Text(
-                        text[index],
-                        style: TextStyle(
-                            color: Colors.black, fontWeight: FontWeight.bold),
-                      ),
-                      subtitle: Text(
-                        sub[index],
-                        style: TextStyle(color: Colors.black),
-                      ),
-                    ),
-                    Container(
-                        child: Padding(
-                      padding: const EdgeInsets.only(left: 10),
-                      child: Row(
-                        children: [
-                          Icon(
-                            Icons.star,
-                            color: Colors.green,
-                          ),
-                          Icon(
-                            Icons.star,
-                            color: Colors.green,
-                          ),
-                          Icon(
-                            Icons.star,
-                            color: Colors.green,
-                          ),
-                          Icon(
-                            Icons.star,
-                            color: Colors.green,
-                          ),
-                          Icon(
-                            Icons.star,
-                            color: Colors.green,
-                          ),
-                          Text(
-                            "  (220 reviews) ",
-                            style: TextStyle(color: Colors.black87),
-                          )
-                        ],
-                      ),
-                    ))
-                  ],
-                )),
-          ),
-        );
-      }, childCount: image.length))
-    ]));
   }
 }
