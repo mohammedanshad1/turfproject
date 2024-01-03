@@ -175,7 +175,7 @@ class _turfhomeState extends State<turfhome> {
     return DefaultTabController(length: 10,
       child: Scaffold(
           body: CustomScrollView(slivers: [
-        SliverAppBar(
+        SliverAppBar(backgroundColor: Colors.green,
             floating: true,
             pinned: true,
             leading: Padding(
@@ -192,7 +192,7 @@ class _turfhomeState extends State<turfhome> {
                 //child: Icon(Icons.favorite),
               //),
             //],
-            bottom: AppBar(
+            bottom: AppBar(backgroundColor: Colors.green,
                 elevation: 0,
                 title: Container(
                   decoration: BoxDecoration(

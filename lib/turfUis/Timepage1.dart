@@ -150,7 +150,7 @@ Container(child: Column(
       child: SizedBox(height: 70,width: 300,
         child: Container(margin: EdgeInsets.all(10),
           decoration: BoxDecoration(borderRadius: BorderRadius.circular(50)),
-          child: ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: Colors.blue,
+          child: ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: Colors.green,
           ),
               onPressed: (){}, child: Text("Proceed",style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),)),
         ),

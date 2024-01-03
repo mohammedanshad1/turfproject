@@ -67,6 +67,8 @@ dependencies:
   fan_carousel_image_slider: ^0.1.2
   date_field: ^3.0.5
   otp_text_field:
+  pay: ^1.1.2
+
 
 
 dev_dependencies:
