@@ -6,7 +6,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../paymentgateway.dart';
-
+/*
 void main(){
 
 
@@ -14,7 +14,7 @@ void main(){
       MaterialApp(home: bookingpage1(),useInheritedMediaQuery: true,debugShowCheckedModeBanner: false,)));
 
 
-}
+}*/
 class bookingpage1 extends StatefulWidget{
   @override
   State<bookingpage1> createState() => _bookingpage1State();

@@ -2,6 +2,8 @@ import 'package:device_preview/device_preview.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import 'Timepage1.dart';
+
 void main() {
   runApp(DevicePreview(
       builder: (BuildContext context) => MaterialApp(
@@ -16,6 +18,7 @@ class turf1 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Stack(children: [
+
       Positioned(
         child: Container(
           decoration: BoxDecoration(
@@ -168,7 +171,9 @@ class turf1 extends StatelessWidget {
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.green,
                         ),
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>bookingpage1()));
+                        },
                         child: Text(
                           "Book Now",
                           style: TextStyle(

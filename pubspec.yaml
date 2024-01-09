@@ -68,7 +68,11 @@ dependencies:
   date_field: ^3.0.5
   otp_text_field:
   pay: ^1.1.2
-
+  provider:
+  firebase_core:
+  firebase_auth:
+  qr_code_scanner:
+  gesture_x_detector:
 
 
 dev_dependencies:

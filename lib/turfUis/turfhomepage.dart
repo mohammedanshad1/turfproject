@@ -104,7 +104,7 @@ class _HomeState extends State<Home> {
   }
 }
 */
-
+/*
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -118,14 +118,6 @@ import 'package:turfproject/turfUis/turf4booking.dart';
 import 'package:turfproject/turfUis/turf5booking.dart';
 import 'package:turfproject/turfUis/turf6booking.dart';
 
-void main() {
-  runApp(DevicePreview(
-      builder: (BuildContext context) =>MaterialApp(
-            home: turfhome(),
-            useInheritedMediaQuery: true,
-            debugShowCheckedModeBanner: false,
-          )));
-}
 
 class turfhome extends StatefulWidget {
   @override
@@ -133,9 +125,8 @@ class turfhome extends StatefulWidget {
 }
 
 class _turfhomeState extends State<turfhome> {
-  
-  
-  var page=[TabBarView(children: [turf1()]),
+  var page = [
+    TabBarView(children: [turf1()]),
     TabBarView(children: [turf2()]),
     TabBarView(children: [turf3()]),
     TabBarView(children: [turf4()]),
@@ -168,31 +159,33 @@ class _turfhomeState extends State<turfhome> {
     "Est Hill,Kozhikkode",
   ];
 
-
-
   @override
   Widget build(BuildContext context) {
-    return DefaultTabController(length: 10,
+    return DefaultTabController(
+      length: 10,
       child: Scaffold(
           body: CustomScrollView(slivers: [
-        SliverAppBar(backgroundColor: Colors.green,
+        SliverAppBar(
+            backgroundColor: Colors.green,
             floating: true,
             pinned: true,
             leading: Padding(
               padding: const EdgeInsets.only(bottom: 70),
               child: Icon(Icons.menu),
             ),
-            title: Center(child: Padding(
+            title: Center(
+                child: Padding(
               padding: const EdgeInsets.only(right: 30),
               child: Text("Kozhikkode Turfs"),
             )),
-           // actions: [
-             // Padding(
-               // padding: const EdgeInsets.only(bottom: 70),
-                //child: Icon(Icons.favorite),
-              //),
+            // actions: [
+            // Padding(
+            // padding: const EdgeInsets.only(bottom: 70),
+            //child: Icon(Icons.favorite),
+            //),
             //],
-            bottom: AppBar(backgroundColor: Colors.green,
+            bottom: AppBar(
+                backgroundColor: Colors.green,
                 elevation: 0,
                 title: Container(
                   decoration: BoxDecoration(
@@ -231,82 +224,75 @@ class _turfhomeState extends State<turfhome> {
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
       crossAxisCount: 3, mainAxisSpacing: 80, crossAxisSpacing: 20)),*/
 
-
-
-
-
-          SliverList(
-                  delegate: SliverChildBuilderDelegate((context, index) {
-                return Container(
-                  child: Padding(
-                    padding: const EdgeInsets.only(top: 30, left: 20, right: 20),
-                    child: Card(
-                        color: Colors.white,
-                        child: Column(
+        SliverList(
+            delegate: SliverChildBuilderDelegate((context, index) {
+          return Container(
+            child: Padding(
+              padding: const EdgeInsets.only(top: 30, left: 20, right: 20),
+              child: Card(
+                  color: Colors.white,
+                  child: Column(
+                    children: [
+                      Column(
+                        children: [
+                          Image(
+                            image: AssetImage(image[index]),
+                            height: 130,
+                            width: double.infinity,
+                            fit: BoxFit.fitWidth,
+                          ),
+                        ],
+                      ),
+                      ListTile(
+                        title: Text(
+                          text[index],
+                          style: TextStyle(
+                              color: Colors.black, fontWeight: FontWeight.bold),
+                        ),
+                        subtitle: Text(
+                          sub[index],
+                          style: TextStyle(color: Colors.black),
+                        ),
+                      ),
+                      Container(
+                          child: Padding(
+                        padding: const EdgeInsets.only(left: 10),
+                        child: Row(
                           children: [
-                            Column(
-                              children: [
-                                Image(
-                                  image: AssetImage(image[index]),
-                                  height: 130,
-                                  width: double.infinity,
-                                  fit: BoxFit.fitWidth,
-                                ),
-                              ],
+                            Icon(
+                              Icons.star,
+                              color: Colors.green,
                             ),
-                            ListTile(
-                              title: Text(
-                                text[index],
-                                style: TextStyle(
-                                    color: Colors.black, fontWeight: FontWeight.bold),
-                              ),
-                              subtitle: Text(
-                                sub[index],
-                                style: TextStyle(color: Colors.black),
-                              ),
+                            Icon(
+                              Icons.star,
+                              color: Colors.green,
                             ),
-                            Container(
-                                child: Padding(
-                              padding: const EdgeInsets.only(left: 10),
-                              child: Row(
-                                children: [
-                                  Icon(
-                                    Icons.star,
-                                    color: Colors.green,
-                                  ),
-                                  Icon(
-                                    Icons.star,
-                                    color: Colors.green,
-                                  ),
-                                  Icon(
-                                    Icons.star,
-                                    color: Colors.green,
-                                  ),
-                                  Icon(
-                                    Icons.star,
-                                    color: Colors.green,
-                                  ),
-                                  Icon(
-                                    Icons.star,
-                                    color: Colors.green,
-                                  ),
-                                  Text(
-                                    "  (220 reviews) ",
-                                    style: TextStyle(color: Colors.black87),
-                                  )
-                                ],
-                              ),
-                            ))
+                            Icon(
+                              Icons.star,
+                              color: Colors.green,
+                            ),
+                            Icon(
+                              Icons.star,
+                              color: Colors.green,
+                            ),
+                            Icon(
+                              Icons.star,
+                              color: Colors.green,
+                            ),
+                            Text(
+                              "  (220 reviews) ",
+                              style: TextStyle(color: Colors.black87),
+                            )
                           ],
-                        )),
-                  ),
-                );
-              }, childCount: image.length)),
-
-
-
-
+                        ),
+                      ))
+                    ],
+                  )),
+            ),
+          );
+        }, childCount: image.length)),
       ])),
     );
   }
 }
+*/

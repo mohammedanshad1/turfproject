@@ -2,15 +2,6 @@ import 'package:device_preview/device_preview.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(DevicePreview(
-      builder: (BuildContext context) => MaterialApp(
-        home: turf5(),
-        useInheritedMediaQuery: true,
-        debugShowCheckedModeBanner: false,
-      )));
-}
-
 class turf5 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
