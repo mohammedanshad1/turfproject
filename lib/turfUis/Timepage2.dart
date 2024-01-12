@@ -13,12 +13,12 @@ void main(){
 
 
 }*/
-class bookingpage1 extends StatefulWidget{
+class bookingpage2 extends StatefulWidget{
   @override
-  State<bookingpage1> createState() => _bookingpage1State();
+  State<bookingpage2> createState() => _bookingpage2State();
 }
 
-class _bookingpage1State extends State<bookingpage1> {
+class _bookingpage2State extends State<bookingpage2> {
   DateTime? selectedDate;
 
   @override
@@ -135,7 +135,7 @@ class _bookingpage1State extends State<bookingpage1> {
 
                           Container(child: Column(
                             children: [
-                              SizedBox(height: 150,),
+                              SizedBox(height: 90,),
                               ListTile(title: Center(child: Text("Grand Total",
                                 style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold,color: Colors.black),)),
 

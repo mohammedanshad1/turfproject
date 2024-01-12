@@ -4,6 +4,7 @@ import 'package:date_field/date_field.dart';
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:turfproject/turfUis/payment/gpayand%20applepay.dart';
 /*
 void main(){
 
@@ -31,7 +32,10 @@ class _bookingpage1State extends State<bookingpage1> {
        children: [
 
          Positioned(
-           child: Container(
+           child: Container(child: Padding(
+             padding: const EdgeInsets.only(right: 320,bottom: 100),
+             child: Icon(Icons.arrow_back_ios,color: Colors.white,),
+           ),
 
              decoration: BoxDecoration(
                  borderRadius: BorderRadius.circular(20),
@@ -39,7 +43,7 @@ class _bookingpage1State extends State<bookingpage1> {
                      image: AssetImage("assets/icons/2_2.jpg"),
                      fit: BoxFit.fitWidth),),height: 200,width: 400,
             // child: new BackdropFilter(filter: new ImageFilter.blur(sigmaX:10.0,sigmaY:10.0),
-             child: new Container(decoration :new BoxDecoration(color: Colors.white30.withOpacity(0.0)),),
+           //  child: new Container(decoration :new BoxDecoration(color: Colors.white30.withOpacity(0.0)),),
             // height: 200,
             // width: 400,
            ),
@@ -137,7 +141,7 @@ Padding(
 
 Container(child: Column(
   children: [
-    SizedBox(height: 150,),
+    SizedBox(height: 90,),
     ListTile(title: Center(child: Text("Grand Total",
       style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold,color: Colors.black),)),
 
@@ -154,7 +158,9 @@ Container(child: Column(
           decoration: BoxDecoration(borderRadius: BorderRadius.circular(50)),
           child: ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: Colors.green,
           ),
-              onPressed: (){}, child: Text("Proceed",style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),)),
+              onPressed: (){
+            Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>PaymentScreen()));
+              }, child: Text("Proceed",style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),)),
         ),
       ),
     )

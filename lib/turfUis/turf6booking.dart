@@ -1,6 +1,9 @@
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:turfproject/turfUis/timepage6.dart';
+
+import 'homepageturf.dart';
 
 
 
@@ -10,13 +13,20 @@ class turf6 extends StatelessWidget {
     return Scaffold(
         body: Stack(children: [
           Positioned(
-            child: Container(
+            child: Container( child: Padding(
+              padding: const EdgeInsets.only(right: 310,bottom: 200),
+              child: GestureDetector(onTap: (){
+                Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>
+                    hmeex()));
+              },
+                  child: Icon(Icons.arrow_back_ios,color: Colors.white,)),
+            ),
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
                   image: DecorationImage(
                       image: AssetImage("assets/icons/final-ground-agra-500x500.webp"),
                       fit: BoxFit.cover)),
-              height: 350,
+              height: 300,
               width: 400,
             ),
           ),
@@ -25,10 +35,10 @@ class turf6 extends StatelessWidget {
               child: Column(
                 children: [
                   Padding(
-                    padding: const EdgeInsets.only(top: 320, right: 140),
+                    padding: const EdgeInsets.only(top: 250, right: 140),
                     child: ListTile(
                       title: Text(
-                        "Zeta Sports Arena",
+                        "Kalista Football Turf",
                         style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 25,
@@ -161,7 +171,10 @@ class turf6 extends StatelessWidget {
                             style: ElevatedButton.styleFrom(
                               backgroundColor: Colors.green,
                             ),
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>
+                                  bookingpage6()));
+                            },
                             child: Text(
                               "Book Now",
                               style: TextStyle(

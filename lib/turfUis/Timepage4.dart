@@ -13,12 +13,12 @@ import 'package:flutter/material.dart';
 
 
 }*/
-class bookingpage1 extends StatefulWidget{
+class bookingpage4 extends StatefulWidget{
   @override
-  State<bookingpage1> createState() => _bookingpage1State();
+  State<bookingpage4> createState() => _bookingpage4State();
 }
 
-class _bookingpage1State extends State<bookingpage1> {
+class _bookingpage4State extends State<bookingpage4> {
   DateTime? selectedDate;
 
   @override
@@ -29,7 +29,10 @@ class _bookingpage1State extends State<bookingpage1> {
             children: [
 
               Positioned(
-                child: Container(
+                child: Container(child: Padding(
+                  padding: const EdgeInsets.only(right: 320,bottom: 100),
+                  child: Icon(Icons.arrow_back_ios,color: Colors.white,),
+                ),
 
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
@@ -37,7 +40,7 @@ class _bookingpage1State extends State<bookingpage1> {
                         image: AssetImage("assets/icons/football-turf-maintenance-service-500x500.webp"),
                         fit: BoxFit.fitWidth),),height: 200,width: 400,
                   // child: new BackdropFilter(filter: new ImageFilter.blur(sigmaX:10.0,sigmaY:10.0),
-                  child: new Container(decoration :new BoxDecoration(color: Colors.white30.withOpacity(0.0)),),
+                 // child: new Container(decoration :new BoxDecoration(color: Colors.white30.withOpacity(0.0)),),
                   // height: 200,
                   // width: 400,
                 ),
@@ -122,7 +125,8 @@ class _bookingpage1State extends State<bookingpage1> {
                           SizedBox(height: 20,),
                           Padding(
                             padding: const EdgeInsets.all(8.0),
-                            child:   Container(decoration: BoxDecoration(
+                            child:   Container(
+                                decoration: BoxDecoration(
 
                                 borderRadius: BorderRadius.circular(10)),
 
@@ -135,7 +139,7 @@ class _bookingpage1State extends State<bookingpage1> {
 
                           Container(child: Column(
                             children: [
-                              SizedBox(height: 150,),
+                              SizedBox(height: 90,),
                               ListTile(title: Center(child: Text("Grand Total",
                                 style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold,color: Colors.black),)),
 

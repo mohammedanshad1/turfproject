@@ -6,7 +6,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
-import 'package:turfproject/firebase/reg.dart';
+
 import 'package:turfproject/turfUis/homepageturf.dart';
 import 'package:turfproject/turfUis/register.dart';
 import 'package:turfproject/turfUis/turfhomepage.dart';
@@ -15,16 +15,17 @@ import 'SPLASH/COMPONENTS/splash.content.dart';
 import 'firebase.dart';
 
 
-
-Future<void> main() async{
-
-
-  WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
-  runApp(GetMaterialApp(
-    home: Login(),
-  ));
-}
+//
+//
+// Future<void> main() async{
+//
+//
+//   WidgetsFlutterBinding.ensureInitialized();
+//   await Firebase.initializeApp();
+//   runApp(GetMaterialApp(debugShowCheckedModeBanner: false,
+//     home: Login(),
+//   ));
+// }
 
 class Login extends StatefulWidget{
   @override
@@ -42,10 +43,8 @@ class _LoginState extends State<Login> {
     return Scaffold(
 
         appBar: AppBar(title: Center(child: Text("Sign In")),
-        leading:GestureDetector(onTap: (){
-          Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>SplashContent(),));
-        },
-            child: Icon(Icons.arrow_back_ios)) ,),
+
+        ),
 
         body: Form(
           key: formkey,

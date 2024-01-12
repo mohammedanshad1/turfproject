@@ -13,12 +13,12 @@ import 'package:flutter/material.dart';
 
 
 }*/
-class bookingpage1 extends StatefulWidget{
+class bookingpage3 extends StatefulWidget{
   @override
-  State<bookingpage1> createState() => _bookingpage1State();
+  State<bookingpage3> createState() => _bookingpage3State();
 }
 
-class _bookingpage1State extends State<bookingpage1> {
+class _bookingpage3State extends State<bookingpage3> {
   DateTime? selectedDate;
 
   @override
@@ -29,7 +29,10 @@ class _bookingpage1State extends State<bookingpage1> {
             children: [
 
               Positioned(
-                child: Container(
+                child: Container( child: Padding(
+                  padding: const EdgeInsets.only(right: 320,bottom: 100),
+                  child: Icon(Icons.arrow_back_ios,color: Colors.white,),
+                ),
 
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
@@ -40,7 +43,7 @@ class _bookingpage1State extends State<bookingpage1> {
                 //  child: new Container(decoration :new BoxDecoration(color: Colors.white30.withOpacity(0.0)),),
                   // height: 200,
                   // width: 400,
-                  child: BackdropFilter(filter: ImageFilter.blur(sigmaX: 4,sigmaY: 4),),
+                  //child: BackdropFilter(filter: ImageFilter.blur(sigmaX: 4,sigmaY: 4),),
                 ),
               ),
               ListView(children: [
@@ -136,7 +139,7 @@ class _bookingpage1State extends State<bookingpage1> {
 
                           Container(child: Column(
                             children: [
-                              SizedBox(height: 150,),
+                              SizedBox(height: 90,),
                               ListTile(title: Center(child: Text("Grand Total",
                                 style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold,color: Colors.black),)),
 

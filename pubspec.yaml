@@ -30,6 +30,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  razorpay_flutter:
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -73,6 +74,9 @@ dependencies:
   firebase_auth:
   qr_code_scanner:
   gesture_x_detector:
+  fluttertoast: ^8.0.6
+
+
 
 
 dev_dependencies:

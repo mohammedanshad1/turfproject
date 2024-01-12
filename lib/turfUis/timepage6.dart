@@ -5,12 +5,12 @@ import 'package:device_preview/device_preview.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class bookingpage1 extends StatefulWidget{
+class bookingpage6 extends StatefulWidget{
   @override
-  State<bookingpage1> createState() => _bookingpage1State();
+  State<bookingpage6> createState() => _bookingpage6State();
 }
 
-class _bookingpage1State extends State<bookingpage1> {
+class _bookingpage6State extends State<bookingpage6> {
   DateTime? selectedDate;
 
   @override
@@ -21,15 +21,19 @@ class _bookingpage1State extends State<bookingpage1> {
             children: [
 
               Positioned(
-                child: Container(
+                child: Container(child: Padding(
+                  padding: const EdgeInsets.only(right: 320,bottom: 100),
+                  child: Icon(Icons.arrow_back_ios,color: Colors.white,),
+                ),
 
                   decoration: BoxDecoration(
+
                     borderRadius: BorderRadius.circular(20),
                     image: DecorationImage(
                         image: AssetImage("assets/icons/final-ground-agra-500x500.webp"),
                         fit: BoxFit.fitWidth),),height: 200,width: 400,
                   // child: new BackdropFilter(filter: new ImageFilter.blur(sigmaX:10.0,sigmaY:10.0),
-                  child: new Container(decoration :new BoxDecoration(color: Colors.white30.withOpacity(0.0)),),
+                //  child: new Container(decoration :new BoxDecoration(color: Colors.white30.withOpacity(0.0)),),
                   // height: 200,
                   // width: 400,
                 ),
@@ -127,7 +131,7 @@ class _bookingpage1State extends State<bookingpage1> {
 
                           Container(child: Column(
                             children: [
-                              SizedBox(height: 150,),
+                              SizedBox(height: 90,),
                               ListTile(title: Center(child: Text("Grand Total",
                                 style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold,color: Colors.black),)),
 

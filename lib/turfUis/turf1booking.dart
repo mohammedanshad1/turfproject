@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'Timepage1.dart';
+import 'homepageturf.dart';
 
 void main() {
   runApp(DevicePreview(
@@ -21,12 +22,20 @@ class turf1 extends StatelessWidget {
 
       Positioned(
         child: Container(
+          child: Padding(
+            padding: const EdgeInsets.only(right: 310,bottom: 200),
+            child: GestureDetector(onTap: (){
+              Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>
+                  hmeex()));
+            },
+                child: Icon(Icons.arrow_back_ios,color: Colors.white,)),
+          ),
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20),
               image: DecorationImage(
                   image: AssetImage("assets/icons/2_2.jpg"),
                   fit: BoxFit.cover)),
-          height: 350,
+          height: 300,
           width: 400,
         ),
       ),
@@ -35,7 +44,7 @@ class turf1 extends StatelessWidget {
           child: Column(
             children: [
               Padding(
-                padding: const EdgeInsets.only(top: 320, right: 140),
+                padding: const EdgeInsets.only(top: 250, right: 140),
                 child: ListTile(
                   title: Text(
                     "Zeta Sports Arena",
