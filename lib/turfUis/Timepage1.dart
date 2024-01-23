@@ -4,7 +4,11 @@ import 'package:date_field/date_field.dart';
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:turfproject/turfUis/payment/gpayand%20applepay.dart';
+import 'package:turfproject/turfUis/payment/booked.dart';
+import 'package:turfproject/turfUis/payment/paymentselectingpage.dart';
+
+//import 'package:turfproject/turfUis/razorpay/main.dart';
+
 /*
 void main(){
 
@@ -159,7 +163,7 @@ Container(child: Column(
           child: ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: Colors.green,
           ),
               onPressed: (){
-            Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>PaymentScreen()));
+            Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>BookingPage()));
               }, child: Text("Proceed",style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),)),
         ),
       ),

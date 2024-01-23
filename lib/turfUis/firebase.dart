@@ -1,5 +1,6 @@
 
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:get/get.dart';
 
 class FireHelper1{
   final FirebaseAuth auth = FirebaseAuth.instance;
@@ -29,8 +30,6 @@ class FireHelper1{
   Future<void>signOut() async {
     await auth.signOut();
   }
-
-
 
 }
 

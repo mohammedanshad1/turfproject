@@ -4,6 +4,8 @@ import 'package:date_field/date_field.dart';
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:turfproject/turfUis/payment/booked.dart';
+import 'package:turfproject/turfUis/payment/paymentselectingpage.dart';
 
 class bookingpage6 extends StatefulWidget{
   @override
@@ -148,7 +150,9 @@ class _bookingpage6State extends State<bookingpage6> {
                                     decoration: BoxDecoration(borderRadius: BorderRadius.circular(50)),
                                     child: ElevatedButton(style: ElevatedButton.styleFrom(backgroundColor: Colors.green,
                                     ),
-                                        onPressed: (){}, child: Text("Proceed",style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),)),
+                                        onPressed: (){
+                                          Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>BookingPage()));
+                                        }, child: Text("Proceed",style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),)),
                                   ),
                                 ),
                               )

@@ -75,6 +75,8 @@ dependencies:
   qr_code_scanner:
   gesture_x_detector:
   fluttertoast: ^8.0.6
+  upi_india: ^3.0.1
+  flutter_credit_card: ^2.0.0
 
 
 
