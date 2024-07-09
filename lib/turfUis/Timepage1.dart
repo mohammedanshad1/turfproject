@@ -8,9 +8,8 @@ class bookingpage1 extends StatefulWidget {
 }
 
 class _bookingpage1State extends State<bookingpage1> {
- 
   TimeOfDay? selectedTime;
-   DateTime? _date;
+  DateTime? _date;
 
   String display() {
     if (_date == null) {
@@ -19,6 +18,7 @@ class _bookingpage1State extends State<bookingpage1> {
       return 'year:${_date!.year}\nmonth:${_date!.month}\nday:${_date!.day}';
     }
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -56,32 +56,26 @@ class _bookingpage1State extends State<bookingpage1> {
                     ),
                     SizedBox(height: 20),
                     Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Container(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
+                      padding: const EdgeInsets.all(15.0),
+                      child: DateFormatField(
+                        type: DateFormatType.type4,
+                        addCalendar: true,
+                        decoration: const InputDecoration(
+                          labelStyle: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 18,
+                          ),
+                          // border: InputBorder.none,
+                          label: Text("Date"),
                         ),
-                        child:  DateFormatField(
-                type: DateFormatType.type4,
-                addCalendar: true,
-                decoration: const InputDecoration(
-                  labelStyle: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    fontStyle: FontStyle.italic,
-                  ),
-                  // border: InputBorder.none,
-                  label: Text("Date"),
-                ),
-                onComplete: (date) {
-                  setState(() {
-                    _date = date;
-                  });
-                },
-              ),
+                        onComplete: (date) {
+                          setState(() {
+                            _date = date;
+                          });
+                        },
                       ),
                     ),
-                    SizedBox(height: 20),
+                    SizedBox(height: 0),
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Container(

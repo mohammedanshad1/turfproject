@@ -11,7 +11,7 @@ class bookingpage3 extends StatefulWidget {
 
 class _bookingpage3State extends State<bookingpage3> {
   TimeOfDay? selectedTime;
-    DateTime? _date;
+  DateTime? _date;
 
   String display() {
     if (_date == null) {
@@ -20,6 +20,7 @@ class _bookingpage3State extends State<bookingpage3> {
       return 'year:${_date!.year}\nmonth:${_date!.month}\nday:${_date!.day}';
     }
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -37,7 +38,8 @@ class _bookingpage3State extends State<bookingpage3> {
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(20),
                 image: DecorationImage(
-                  image: AssetImage("assets/icons/cricket-pitch-astro-turf-500x500.webp"),
+                  image: AssetImage(
+                      "assets/icons/cricket-pitch-astro-turf-500x500.webp"),
                   fit: BoxFit.fitWidth,
                 ),
               ),
@@ -55,25 +57,28 @@ class _bookingpage3State extends State<bookingpage3> {
                       padding: EdgeInsets.symmetric(vertical: 20.0),
                       child: Text(''),
                     ),
-                    DateFormatField(
-                type: DateFormatType.type4,
-                addCalendar: true,
-                decoration: const InputDecoration(
-                  labelStyle: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18,
-                    fontStyle: FontStyle.italic,
-                  ),
-                  // border: InputBorder.none,
-                  label: Text("Date"),
-                ),
-                onComplete: (date) {
-                  setState(() {
-                    _date = date;
-                  });
-                },
-              ),
                     SizedBox(height: 20),
+                    Padding(
+                      padding: const EdgeInsets.all(15.0),
+                      child: DateFormatField(
+                        type: DateFormatType.type4,
+                        addCalendar: true,
+                        decoration: const InputDecoration(
+                          labelStyle: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 18,
+                          ),
+                          // border: InputBorder.none,
+                          label: Text("Date"),
+                        ),
+                        onComplete: (date) {
+                          setState(() {
+                            _date = date;
+                          });
+                        },
+                      ),
+                    ),
+                    SizedBox(height: 0),
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Container(
