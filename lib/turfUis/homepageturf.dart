@@ -53,11 +53,11 @@ class _hmeexState extends State<hmeex> {
           selectedItemColor: Colors.black,unselectedItemColor: Colors.white,
           items: [
             BottomNavigationBarItem(icon:IconButton(onPressed: (){
-             Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>userprofile()));
+             Navigator.push(context, MaterialPageRoute(builder: (context)=>userprofile()));
     },icon:Icon( Icons.person),),label: "profile"),
             BottomNavigationBarItem(icon:Icon( Icons.search),label: "Search"),
             BottomNavigationBarItem(icon:IconButton(onPressed: (){
-    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>settings()));
+    Navigator.push(context, MaterialPageRoute(builder: (context)=>settings()));
 
     },icon: Icon( Icons.settings)),label: "Settings"),
            // BottomNavigationBarItem(icon:Icon( Icons.),label: "Favorites"),
@@ -73,7 +73,7 @@ class _hmeexState extends State<hmeex> {
                   padding: const EdgeInsets.only(top: 30, left: 20, right: 20),
                   child: GestureDetector(
                     onTap: () {
-                      Navigator.pushReplacement(context,
+                      Navigator.push(context,
                           MaterialPageRoute(builder: (context) => turf1()));
                     },
                     child: Card(
@@ -137,7 +137,7 @@ class _hmeexState extends State<hmeex> {
                   padding: const EdgeInsets.only(top: 30, left: 20, right: 20),
                   child: GestureDetector(
                     onTap: () {
-                      Navigator.pushReplacement(context,
+                      Navigator.push(context,
                           MaterialPageRoute(builder: (context) => turf2()));
                     },
                     child: Card(
@@ -202,7 +202,7 @@ class _hmeexState extends State<hmeex> {
                   padding: const EdgeInsets.only(top: 30, left: 20, right: 20),
                   child: GestureDetector(
                     onTap: () {
-                      Navigator.pushReplacement(context,
+                      Navigator.push(context,
                           MaterialPageRoute(builder: (context) => turf3()));
                     },
                     child: Card(
@@ -267,7 +267,7 @@ class _hmeexState extends State<hmeex> {
                   padding: const EdgeInsets.only(top: 30, left: 20, right: 20),
                   child: GestureDetector(
                     onTap: () {
-                      Navigator.pushReplacement(context,
+                      Navigator.push(context,
                           MaterialPageRoute(builder: (context) => turf4()));
                     },
                     child: Card(
@@ -332,7 +332,7 @@ class _hmeexState extends State<hmeex> {
                   padding: const EdgeInsets.only(top: 30, left: 20, right: 20),
                   child: GestureDetector(
                     onTap: () {
-                      Navigator.pushReplacement(context,
+                      Navigator.push(context,
                           MaterialPageRoute(builder: (context) => turf5()));
                     },
                     child: Card(
@@ -396,7 +396,7 @@ class _hmeexState extends State<hmeex> {
                   padding: const EdgeInsets.only(top: 30, left: 20, right: 20),
                   child: GestureDetector(
                     onTap: () {
-                      Navigator.pushReplacement(context,
+                      Navigator.push(context,
                           MaterialPageRoute(builder: (context) => turf6()));
                     },
                     child: Card(

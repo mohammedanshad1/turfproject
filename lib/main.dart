@@ -1,26 +1,40 @@
-
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:turfproject/turfUis/SPLASH/routes.dart';
+import 'package:get/get.dart';
 import 'package:turfproject/turfUis/SPLASH/splashscreen.dart';
-import 'package:turfproject/turfUis/SPLASH/themes.dart';
+import 'package:turfproject/turfUis/firebase.dart';
+import 'package:turfproject/turfUis/homepageturf.dart';
 
-void main() {
-  runApp(const MyApp());
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
+      home: CheckLogin(),
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      theme: theme(),
-      // home: SplashScreen(),
-     // initialRoute: SplashScreen.routeName,
-      //routes: routes,
+    );
+  }
+}
+
+class CheckLogin extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return FutureBuilder(
+      future: FireHelper1().isUserLoggedIn(),
+      builder: (context, snapshot) {
+        if (snapshot.connectionState == ConnectionState.waiting) {
+          return Center(child: CircularProgressIndicator());
+        } else if (snapshot.data == true) {
+          return hmeex();
+        } else {
+          return SplashScreen();
+        }
+      },
     );
   }
 }

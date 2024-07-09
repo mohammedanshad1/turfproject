@@ -182,7 +182,7 @@ String? name;
                       onPressed: () {
                         if (formkey.currentState!.validate()) ;{
                           formkey.currentState!.save();
-                          FireHelper1().signUp(mail: email!, pasword: password!).then((value){
+                          FireHelper1().signUp(mail: email!, password: password!).then((value){
                             if(value == null){
                               Get.to(Login());
                             }else{

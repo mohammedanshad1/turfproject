@@ -25,8 +25,7 @@ class turf1 extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.only(right: 310,bottom: 200),
             child: GestureDetector(onTap: (){
-              Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>
-                  hmeex()));
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>hmeex()));
             },
                 child: Icon(Icons.arrow_back_ios,color: Colors.white,)),
           ),

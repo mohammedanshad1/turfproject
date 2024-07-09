@@ -30,7 +30,6 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  razorpay_flutter:
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -56,28 +55,13 @@ dependencies:
   cached_network_image: ^3.3.0
   transparent_image: ^2.0.1
   liquid_progress_indicator: ^0.4.0
-  gradient_slider: ^1.0.1
-  awesome_dialog: ^3.1.0
-  google_maps_flutter: ^2.5.0
   shared_preferences: ^2.2.2
-  sqflite: ^2.3.0
-  hive: ^2.2.3
-  hive_flutter: ^1.1.0
   get:
-  email_validator: ^2.1.17
-  fan_carousel_image_slider: ^0.1.2
-  date_field: ^3.0.5
-  otp_text_field:
-  pay: ^1.1.2
-  provider:
   firebase_core:
   firebase_auth:
-  qr_code_scanner:
   gesture_x_detector:
   fluttertoast: ^8.0.6
-  upi_india: ^3.0.1
-  flutter_credit_card: ^2.0.0
-
+  date_format_field: ^0.1.0
 
 
 
